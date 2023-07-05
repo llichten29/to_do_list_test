@@ -174,39 +174,17 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    FutureBuilder<int>(
-                      future: queryUsersRecordCount(),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                color: FlutterFlowTheme.of(context).primary,
-                              ),
-                            ),
-                          );
-                        }
-                        int containerCount = snapshot.data!;
-                        return Container(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 53.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.fitWidth,
-                              image: Image.asset(
-                                'assets/images/waves@2x.png',
-                              ).image,
-                            ),
-                          ),
-                          child: Text(
-                            containerCount.toString(),
-                            style: FlutterFlowTheme.of(context).bodyMedium,
-                          ),
-                        );
-                      },
+                    Container(
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: 53.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.fitWidth,
+                          image: Image.asset(
+                            'assets/images/waves@2x.png',
+                          ).image,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -489,51 +467,6 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                       ),
                     ),
                   ],
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Builder(
-                        builder: (context) {
-                          final demo = myTasksToDoListRecordList.toList();
-                          return Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: List.generate(demo.length, (demoIndex) {
-                              final demoItem = demo[demoIndex];
-                              return Icon(
-                                Icons.directions_walk,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 24.0,
-                              );
-                            }),
-                          );
-                        },
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Icon(
-                            Icons.access_time,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 24.0,
-                          ),
-                          Text(
-                            _model.test,
-                            style: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
                 ),
                 Padding(
                   padding:
