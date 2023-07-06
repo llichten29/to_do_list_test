@@ -213,7 +213,9 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    'Due',
+                                    FFLocalizations.of(context).getText(
+                                      'w0lwy179' /* Due */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).titleSmall,
                                   ),
@@ -228,8 +230,12 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  dateTimeFormat('MMMEd',
-                                      taskDetailsToDoListRecord.toDoDate!),
+                                  dateTimeFormat(
+                                    'MMMEd',
+                                    taskDetailsToDoListRecord.toDoDate!,
+                                    locale: FFLocalizations.of(context)
+                                        .languageCode,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium,
                                 ),
@@ -237,8 +243,12 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       4.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    dateTimeFormat('jm',
-                                        taskDetailsToDoListRecord.toDoDate!),
+                                    dateTimeFormat(
+                                      'jm',
+                                      taskDetailsToDoListRecord.toDoDate!,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -286,7 +296,9 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                     ),
                                   );
                                 },
-                                text: 'Mark As Complete',
+                                text: FFLocalizations.of(context).getText(
+                                  '2rfds4d5' /* Mark As Complete */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 300.0,
                                   height: 56.0,

@@ -17,7 +17,9 @@ class LoginModel extends FlutterFlowModel {
   String? Function(BuildContext, String?)? emailTextControllerValidator;
   String? _emailTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Please fill in a valid email address...';
+      return FFLocalizations.of(context).getText(
+        'wog55uia' /* Please fill in a valid email a... */,
+      );
     }
 
     return null;
@@ -29,7 +31,9 @@ class LoginModel extends FlutterFlowModel {
   String? Function(BuildContext, String?)? passwordTextControllerValidator;
   String? _passwordTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'That password doesn\'t match.';
+      return FFLocalizations.of(context).getText(
+        '4bia006h' /* That password doesn't match. */,
+      );
     }
 
     return null;

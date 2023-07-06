@@ -126,7 +126,9 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
         backgroundColor: FlutterFlowTheme.of(context).primary,
         automaticallyImplyLeading: false,
         title: Text(
-          'Completed Tasks',
+          FFLocalizations.of(context).getText(
+            'vsun2d4j' /* Completed Tasks */,
+          ),
           style: FlutterFlowTheme.of(context).displaySmall.override(
                 fontFamily: 'Outfit',
                 color: FlutterFlowTheme.of(context).white,
@@ -197,7 +199,10 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                     ),
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Search...',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'ymjd7cna' /* Search... */,
+                                      ),
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
@@ -366,9 +371,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                                 0.0, 0.0),
                                                     child: Text(
                                                       dateTimeFormat(
-                                                          'MMMEd',
-                                                          listViewToDoListRecord
-                                                              .completedDate!),
+                                                        'MMMEd',
+                                                        listViewToDoListRecord
+                                                            .completedDate!,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -382,9 +392,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                                 0.0, 0.0),
                                                     child: Text(
                                                       dateTimeFormat(
-                                                          'jm',
-                                                          listViewToDoListRecord
-                                                              .completedDate!),
+                                                        'jm',
+                                                        listViewToDoListRecord
+                                                            .completedDate!,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -546,9 +561,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                                 0.0, 0.0),
                                                     child: Text(
                                                       dateTimeFormat(
-                                                          'MMMEd',
-                                                          listViewToDoListRecord
-                                                              .completedDate!),
+                                                        'MMMEd',
+                                                        listViewToDoListRecord
+                                                            .completedDate!,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -562,9 +582,14 @@ class _CompletedTasksWidgetState extends State<CompletedTasksWidget>
                                                                 0.0, 0.0),
                                                     child: Text(
                                                       dateTimeFormat(
-                                                          'jm',
-                                                          listViewToDoListRecord
-                                                              .completedDate!),
+                                                        'jm',
+                                                        listViewToDoListRecord
+                                                            .completedDate!,
+                                                        locale:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode,
+                                                      ),
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)

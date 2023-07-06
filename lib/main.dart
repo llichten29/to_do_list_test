@@ -20,6 +20,7 @@ void main() async {
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
+  await FFLocalizations.initialize();
 
   runApp(MyApp());
 }
@@ -34,7 +35,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
+  Locale? _locale = FFLocalizations.getStoredLocale();
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   late Stream<BaseAuthUser> userStream;
@@ -64,6 +65,7 @@ class _MyAppState extends State<MyApp> {
 
   void setLocale(String language) {
     setState(() => _locale = createLocale(language));
+    FFLocalizations.storeLocale(language);
   }
 
   void setThemeMode(ThemeMode mode) => setState(() {
@@ -82,7 +84,10 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: _locale,
-      supportedLocales: const [Locale('en', '')],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('fr'),
+      ],
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
@@ -161,7 +166,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.playlist_add,
               size: 32.0,
             ),
-            label: '--',
+            label: FFLocalizations.of(context).getText(
+              '4z2eghcf' /* -- */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -173,7 +180,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.alarm_on,
               size: 32.0,
             ),
-            label: '--',
+            label: FFLocalizations.of(context).getText(
+              'yabpci9l' /* -- */,
+            ),
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -185,7 +194,9 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.person_sharp,
               size: 32.0,
             ),
-            label: '--',
+            label: FFLocalizations.of(context).getText(
+              '3vfyx7au' /* -- */,
+            ),
             tooltip: '',
           )
         ],

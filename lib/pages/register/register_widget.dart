@@ -83,8 +83,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           controller: _model.fullNameController,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Full Name',
-                            hintText: 'Enter your name here...',
+                            labelText: FFLocalizations.of(context).getText(
+                              'q7jpte9j' /* Full Name */,
+                            ),
+                            hintText: FFLocalizations.of(context).getText(
+                              'ohjcm90n' /* Enter your name here... */,
+                            ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).secondary,
@@ -128,8 +132,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             controller: _model.emailTextController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Email Address',
-                              hintText: 'Enter your email here...',
+                              labelText: FFLocalizations.of(context).getText(
+                                'ohsot8ns' /* Email Address */,
+                              ),
+                              hintText: FFLocalizations.of(context).getText(
+                                'jlxr3ewz' /* Enter your email here... */,
+                              ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context).secondary,
@@ -174,8 +182,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             controller: _model.passwordTextController,
                             obscureText: !_model.passwordVisibility1,
                             decoration: InputDecoration(
-                              labelText: 'Password',
-                              hintText: 'Enter your password here...',
+                              labelText: FFLocalizations.of(context).getText(
+                                'x96jm19j' /* Password */,
+                              ),
+                              hintText: FFLocalizations.of(context).getText(
+                                'zwf82srg' /* Enter your password here... */,
+                              ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context).secondary,
@@ -233,8 +245,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             controller: _model.confirmPasswordTextController,
                             obscureText: !_model.passwordVisibility2,
                             decoration: InputDecoration(
-                              labelText: 'Confirm Password',
-                              hintText: 'Confirm password here...',
+                              labelText: FFLocalizations.of(context).getText(
+                                'awdh9d8q' /* Confirm Password */,
+                              ),
+                              hintText: FFLocalizations.of(context).getText(
+                                'hvfpfznp' /* Confirm password here... */,
+                              ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context).secondary,
@@ -322,7 +338,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 (r) => false,
                               );
                             },
-                            text: 'Create Account',
+                            text: FFLocalizations.of(context).getText(
+                              'pq33c8kb' /* Create Account */,
+                            ),
                             options: FFButtonOptions(
                               width: 200.0,
                               height: 50.0,
@@ -362,7 +380,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 6.0),
                             child: Text(
-                              'Don’t have an account yet? ',
+                              FFLocalizations.of(context).getText(
+                                '8bcitfkh' /* Don’t have an account yet?  */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -387,7 +407,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   ),
                                 );
                               },
-                              text: 'Login',
+                              text: FFLocalizations.of(context).getText(
+                                'hiowmwcy' /* Login */,
+                              ),
                               options: FFButtonOptions(
                                 width: 80.0,
                                 height: 30.0,

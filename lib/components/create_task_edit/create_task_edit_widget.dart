@@ -121,7 +121,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Eddit Task',
+                                FFLocalizations.of(context).getText(
+                                  'hqfcqf0t' /* Eddit Task */,
+                                ),
                                 style:
                                     FlutterFlowTheme.of(context).headlineMedium,
                               ),
@@ -135,7 +137,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Fill out the details below to add a new task.',
+                                FFLocalizations.of(context).getText(
+                                  '0asb52au' /* Fill out the details below to ... */,
+                                ),
                                 style: FlutterFlowTheme.of(context).titleSmall,
                               ),
                             ],
@@ -149,10 +153,14 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Task Name',
+                              labelText: FFLocalizations.of(context).getText(
+                                '5vrwj44y' /* Task Name */,
+                              ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
-                              hintText: 'Enter your task here....',
+                              hintText: FFLocalizations.of(context).getText(
+                                'knt6nrl6' /* Enter your task here.... */,
+                              ),
                               hintStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
                               enabledBorder: OutlineInputBorder(
@@ -200,10 +208,14 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                             controller: _model.textController2,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Details',
+                              labelText: FFLocalizations.of(context).getText(
+                                'iyy9ckv8' /* Details */,
+                              ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
-                              hintText: 'Enter a description here...',
+                              hintText: FFLocalizations.of(context).getText(
+                                'hmkpu5m4' /* Enter a description here... */,
+                              ),
                               hintStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
                               enabledBorder: OutlineInputBorder(
@@ -271,7 +283,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    'Current Due Date',
+                                    FFLocalizations.of(context).getText(
+                                      '1ho53h5m' /* Current Due Date */,
+                                    ),
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
                                   ),
@@ -284,8 +298,12 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                     children: [
                                       Text(
                                         valueOrDefault<String>(
-                                          dateTimeFormat('MMMEd',
-                                              widget.todoRef!.toDoDate),
+                                          dateTimeFormat(
+                                            'MMMEd',
+                                            widget.todoRef!.toDoDate,
+                                            locale: FFLocalizations.of(context)
+                                                .languageCode,
+                                          ),
                                           'Change Date',
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -296,7 +314,11 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                             4.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           dateTimeFormat(
-                                              'jm', widget.todoRef!.toDoDate!),
+                                            'jm',
+                                            widget.todoRef!.toDoDate!,
+                                            locale: FFLocalizations.of(context)
+                                                .languageCode,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleSmall,
                                         ),
@@ -327,6 +349,12 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 },
                                 currentTime: getCurrentTimestamp,
                                 minTime: DateTime(0, 0, 0),
+                                locale: LocaleType.values.firstWhere(
+                                  (l) =>
+                                      l.name ==
+                                      FFLocalizations.of(context).languageCode,
+                                  orElse: () => LocaleType.en,
+                                ),
                               );
                             },
                             child: Container(
@@ -351,7 +379,11 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                     Text(
                                       valueOrDefault<String>(
                                         dateTimeFormat(
-                                            'MMMEd', _model.datePicked),
+                                          'MMMEd',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         'Change Date',
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -361,7 +393,12 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           4.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        dateTimeFormat('jm', _model.datePicked),
+                                        dateTimeFormat(
+                                          'jm',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall,
                                       ),
@@ -383,7 +420,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 onPressed: () async {
                                   Navigator.pop(context);
                                 },
-                                text: 'Cancel',
+                                text: FFLocalizations.of(context).getText(
+                                  'ykoycfmd' /* Cancel */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 110.0,
                                   height: 50.0,
@@ -419,7 +458,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                   ));
                                   Navigator.pop(context);
                                 },
-                                text: 'Update Task',
+                                text: FFLocalizations.of(context).getText(
+                                  '5jyd5gie' /* Update Task */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 170.0,
                                   height: 50.0,

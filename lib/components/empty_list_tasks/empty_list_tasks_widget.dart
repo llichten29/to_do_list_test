@@ -56,7 +56,9 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'You don\'t have any tasks',
+                FFLocalizations.of(context).getText(
+                  '0lb4desl' /* You don't have any tasks */,
+                ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineSmall,
               ),
@@ -71,7 +73,9 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
             children: [
               Expanded(
                 child: Text(
-                  'Create tasks by tapping the button below.',
+                  FFLocalizations.of(context).getText(
+                    'xkacvoc6' /* Create tasks by tapping the bu... */,
+                  ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).titleSmall,
                 ),
@@ -99,7 +103,9 @@ class _EmptyListTasksWidgetState extends State<EmptyListTasksWidget> {
                 },
               ).then((value) => setState(() {}));
             },
-            text: 'Create Task',
+            text: FFLocalizations.of(context).getText(
+              'hu5hxt4f' /* Create Task */,
+            ),
             options: FFButtonOptions(
               width: 170.0,
               height: 50.0,

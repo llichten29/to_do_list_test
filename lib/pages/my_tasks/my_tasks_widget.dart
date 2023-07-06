@@ -156,7 +156,9 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
             backgroundColor: FlutterFlowTheme.of(context).primary,
             automaticallyImplyLeading: false,
             title: Text(
-              'My Tasks',
+              FFLocalizations.of(context).getText(
+                '5g9ngtmx' /* My Tasks */,
+              ),
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: 'Outfit',
                     color: FlutterFlowTheme.of(context).white,
@@ -336,7 +338,10 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                                     autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      hintText: 'Search...',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '0ty7baha' /* Search... */,
+                                      ),
                                       enabledBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
                                           color: Color(0x00000000),
@@ -428,7 +433,14 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     FlutterFlowRadioButton(
-                      options: ['date', 'name'].toList(),
+                      options: [
+                        FFLocalizations.of(context).getText(
+                          '08rbinur' /* date */,
+                        ),
+                        FFLocalizations.of(context).getText(
+                          'u8vx9019' /* name */,
+                        )
+                      ].toList(),
                       onChanged: (val) async {
                         setState(() {});
                         setState(() {
@@ -436,7 +448,10 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                         });
                       },
                       controller: _model.radioButtonValueController ??=
-                          FormFieldController<String>('date'),
+                          FormFieldController<String>(
+                              FFLocalizations.of(context).getText(
+                        'ae8ic6lt' /* date */,
+                      )),
                       optionHeight: 32.0,
                       textStyle: FlutterFlowTheme.of(context).labelMedium,
                       selectedTextStyle:
@@ -475,7 +490,9 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        'Scheduled Tasks',
+                        FFLocalizations.of(context).getText(
+                          '4ml5kzat' /* Scheduled Tasks */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall,
                       ),
                     ],
@@ -625,9 +642,13 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                                                                     0.0),
                                                         child: Text(
                                                           dateTimeFormat(
-                                                              'd/M/y',
-                                                              toDoListItem
-                                                                  .toDoDate!),
+                                                            'd/M/y',
+                                                            toDoListItem
+                                                                .toDoDate!,
+                                                            locale: FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .titleSmall,
@@ -643,9 +664,13 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                                                                     0.0),
                                                         child: Text(
                                                           dateTimeFormat(
-                                                              'Hm',
-                                                              toDoListItem
-                                                                  .toDoDate!),
+                                                            'Hm',
+                                                            toDoListItem
+                                                                .toDoDate!,
+                                                            locale: FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .titleSmall,
@@ -869,9 +894,13 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                                                                     0.0),
                                                         child: Text(
                                                           dateTimeFormat(
-                                                              'd/M/y',
-                                                              toDoListItem
-                                                                  .toDoDate!),
+                                                            'd/M/y',
+                                                            toDoListItem
+                                                                .toDoDate!,
+                                                            locale: FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .titleSmall,
@@ -887,9 +916,13 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                                                                     0.0),
                                                         child: Text(
                                                           dateTimeFormat(
-                                                              'Hm',
-                                                              toDoListItem
-                                                                  .toDoDate!),
+                                                            'Hm',
+                                                            toDoListItem
+                                                                .toDoDate!,
+                                                            locale: FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode,
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .titleSmall,

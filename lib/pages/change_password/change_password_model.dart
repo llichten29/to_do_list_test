@@ -17,7 +17,9 @@ class ChangePasswordModel extends FlutterFlowModel {
   String? Function(BuildContext, String?)? emailTextControllerValidator;
   String? _emailTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Please fill in a new password..';
+      return FFLocalizations.of(context).getText(
+        'pwblv30e' /* Please fill in a new password.... */,
+      );
     }
 
     return null;

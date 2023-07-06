@@ -93,7 +93,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               },
             ),
             title: Text(
-              'Edit Profile',
+              FFLocalizations.of(context).getText(
+                'jg3688xa' /* Edit Profile */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium,
             ),
             actions: [],
@@ -154,7 +156,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Update Account Information',
+                                  FFLocalizations.of(context).getText(
+                                    'suxbh4su' /* Update Account Information */,
+                                  ),
                                   style: FlutterFlowTheme.of(context).bodySmall,
                                 ),
                               ),
@@ -168,10 +172,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Full Name',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'uoxb1fre' /* Full Name */,
+                                    ),
                                     labelStyle:
                                         FlutterFlowTheme.of(context).titleSmall,
-                                    hintText: 'Please enter your full name...',
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'p6rqbq9i' /* Please enter your full name... */,
+                                    ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).titleSmall,
                                     enabledBorder: OutlineInputBorder(
@@ -228,10 +238,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   ),
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Email Address',
+                                    labelText:
+                                        FFLocalizations.of(context).getText(
+                                      'iudu2z7s' /* Email Address */,
+                                    ),
                                     labelStyle:
                                         FlutterFlowTheme.of(context).titleSmall,
-                                    hintText: 'Your email...',
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      '6lnkgaa2' /* Your email... */,
+                                    ),
                                     hintStyle:
                                         FlutterFlowTheme.of(context).titleSmall,
                                     enabledBorder: OutlineInputBorder(
@@ -299,7 +315,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           ));
                                           Navigator.pop(context);
                                         },
-                                        text: 'Save Changes',
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'vn3f4qpq' /* Save Changes */,
+                                        ),
                                         options: FFButtonOptions(
                                           width: 230.0,
                                           height: 50.0,

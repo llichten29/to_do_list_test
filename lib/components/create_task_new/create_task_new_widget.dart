@@ -114,7 +114,9 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Add Task',
+                                FFLocalizations.of(context).getText(
+                                  'o3mzyn97' /* Add Task */,
+                                ),
                                 style:
                                     FlutterFlowTheme.of(context).headlineMedium,
                               ),
@@ -128,7 +130,9 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Fill out the details below to add a new task.',
+                                FFLocalizations.of(context).getText(
+                                  '6a7kx8st' /* Fill out the details below to ... */,
+                                ),
                                 style: FlutterFlowTheme.of(context).titleSmall,
                               ),
                             ],
@@ -142,10 +146,14 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Task Name',
+                              labelText: FFLocalizations.of(context).getText(
+                                '873ifglp' /* Task Name */,
+                              ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
-                              hintText: 'Enter your task here....',
+                              hintText: FFLocalizations.of(context).getText(
+                                'vjfv7slm' /* Enter your task here.... */,
+                              ),
                               hintStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
                               enabledBorder: OutlineInputBorder(
@@ -193,10 +201,14 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                             controller: _model.textController2,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Details',
+                              labelText: FFLocalizations.of(context).getText(
+                                'o0xqhnco' /* Details */,
+                              ),
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
-                              hintText: 'Enter a description here...',
+                              hintText: FFLocalizations.of(context).getText(
+                                '8yqlogoh' /* Enter a description here... */,
+                              ),
                               hintStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
                               enabledBorder: OutlineInputBorder(
@@ -258,6 +270,12 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                                 },
                                 currentTime: getCurrentTimestamp,
                                 minTime: getCurrentTimestamp,
+                                locale: LocaleType.values.firstWhere(
+                                  (l) =>
+                                      l.name ==
+                                      FFLocalizations.of(context).languageCode,
+                                  orElse: () => LocaleType.en,
+                                ),
                               );
                             },
                             child: Container(
@@ -282,7 +300,11 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                                     Text(
                                       valueOrDefault<String>(
                                         dateTimeFormat(
-                                            'MMMEd', _model.datePicked),
+                                          'MMMEd',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         'Select a Date / Time',
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -297,7 +319,12 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           4.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        dateTimeFormat('jm', _model.datePicked),
+                                        dateTimeFormat(
+                                          'jm',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -325,7 +352,9 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                                 onPressed: () async {
                                   Navigator.pop(context);
                                 },
-                                text: 'Cancel',
+                                text: FFLocalizations.of(context).getText(
+                                  'rxp6jan3' /* Cancel */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 110.0,
                                   height: 50.0,
@@ -364,7 +393,9 @@ class _CreateTaskNewWidgetState extends State<CreateTaskNewWidget> {
                                       ));
                                   Navigator.pop(context);
                                 },
-                                text: 'Create Task',
+                                text: FFLocalizations.of(context).getText(
+                                  'zx7q3oly' /* Create Task */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 170.0,
                                   height: 50.0,

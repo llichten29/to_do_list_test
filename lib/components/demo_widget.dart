@@ -90,14 +90,18 @@ class _DemoWidgetState extends State<DemoWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                 child: Text(
-                  'Create Note',
+                  FFLocalizations.of(context).getText(
+                    '16yowz1l' /* Create Note */,
+                  ),
                   style: FlutterFlowTheme.of(context).headlineMedium,
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 0.0),
                 child: Text(
-                  'Find members by searching below',
+                  FFLocalizations.of(context).getText(
+                    'y824vxaf' /* Find members by searching belo... */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelMedium,
                 ),
               ),
@@ -135,7 +139,9 @@ class _DemoWidgetState extends State<DemoWidget> {
                   controller: _model.shortBioController,
                   obscureText: false,
                   decoration: InputDecoration(
-                    hintText: 'Enter your note here...',
+                    hintText: FFLocalizations.of(context).getText(
+                      'huhtuyor' /* Enter your note here... */,
+                    ),
                     hintStyle: FlutterFlowTheme.of(context).labelMedium,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -188,7 +194,9 @@ class _DemoWidgetState extends State<DemoWidget> {
                       onPressed: () async {
                         Navigator.pop(context);
                       },
-                      text: 'Create Note',
+                      text: FFLocalizations.of(context).getText(
+                        '6zx86jf1' /* Create Note */,
+                      ),
                       options: FFButtonOptions(
                         width: 270.0,
                         height: 50.0,

@@ -88,7 +88,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
               },
             ),
             title: Text(
-              'Change Password',
+              FFLocalizations.of(context).getText(
+                '383xyszm' /* Change Password */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium,
             ),
             actions: [],
@@ -133,7 +135,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
-                              'Enter your email and we will send a reset password link to your email for you to update it.',
+                              FFLocalizations.of(context).getText(
+                                'ultnuhmy' /* Enter your email and we will s... */,
+                              ),
                               style: FlutterFlowTheme.of(context).bodySmall,
                             ),
                           ),
@@ -144,11 +148,14 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                               controller: _model.emailTextController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Email address here...',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '6w4smwhe' /* Email address here... */,
+                                ),
                                 labelStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
-                                hintText:
-                                    'We will send a link to your email...',
+                                hintText: FFLocalizations.of(context).getText(
+                                  '985tfh73' /* We will send a link to your em... */,
+                                ),
                                 hintStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -225,7 +232,9 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                                       );
                                       Navigator.pop(context);
                                     },
-                                    text: 'Send Link',
+                                    text: FFLocalizations.of(context).getText(
+                                      '614rlu18' /* Send Link */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 230.0,
                                       height: 50.0,

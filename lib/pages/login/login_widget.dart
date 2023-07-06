@@ -85,8 +85,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                               controller: _model.emailTextController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Email Address',
-                                hintText: 'Your email...',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'efwxqivb' /* Email Address */,
+                                ),
+                                hintText: FFLocalizations.of(context).getText(
+                                  '4w7s7s3n' /* Your email... */,
+                                ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -142,8 +146,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 controller: _model.passwordTextController,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
-                                  labelText: 'Password',
-                                  hintText: 'Enter your password here...',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    '3ufmatlh' /* Password */,
+                                  ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'kzmsasjy' /* Enter your password here... */,
+                                  ),
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -231,7 +240,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     (r) => false,
                                   );
                                 },
-                                text: 'Login',
+                                text: FFLocalizations.of(context).getText(
+                                  '3ykn60dv' /* Login */,
+                                ),
                                 options: FFButtonOptions(
                                   width: 200.0,
                                   height: 50.0,
@@ -268,7 +279,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 6.0),
                                     child: Text(
-                                      'Don’t have an account yet? ',
+                                      FFLocalizations.of(context).getText(
+                                        '7gabp7j8' /* Don’t have an account yet?  */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -291,7 +304,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ),
                                       );
                                     },
-                                    text: 'Register',
+                                    text: FFLocalizations.of(context).getText(
+                                      'hcz9q3bi' /* Register */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 100.0,
                                       height: 32.0,
